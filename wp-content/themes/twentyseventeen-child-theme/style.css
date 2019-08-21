@@ -1,0 +1,16 @@
+/*
+Theme Name: Custom CMS Class - A1 - T1 - Child Theme
+Description: Custom CMS Class - A1 - T1 is a child theme made for the Custom CMS class using the parent theme Twenty Seventeen.
+Author: J390101 - Alessandro Coraglia
+Template: twentyseventeen
+Version: 1.0.0
+ */
+
+.site-title {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 4em;
+}
+
+.page-title {
+    color: aqua;
+}
