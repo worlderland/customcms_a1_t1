@@ -48,3 +48,11 @@ function child_theme_widget_init()
     ));
 }
 add_action('widgets_init', 'child_theme_widget_init');
+
+//Registering a nav menu
+function child_theme_register_menu()
+{
+
+    register_nav_menu('new-menu', __('Sample of registered Menu'));
+}
+add_action('init', 'child_theme_register_menu');
