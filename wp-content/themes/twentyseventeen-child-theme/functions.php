@@ -14,3 +14,11 @@ function import_child_theme_styles()
     );
 }
 add_action('wp_enqueue_scripts', 'import_child_theme_styles');
+
+//customizing the header from the functions.php file of a child theme, thanks to the twentyseventeen_custom_header_args FILTER. 
+function my_custom_header_args($args)
+{
+    $args['default-image'] = get_theme_file_uri('/assets/images/header.jpg');
+    return $args;
+}
+add_filter('twentyseventeen_custom_header_args', 'my_custom_header_args');
