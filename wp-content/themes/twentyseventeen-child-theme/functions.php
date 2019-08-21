@@ -56,3 +56,10 @@ function child_theme_register_menu()
     register_nav_menu('new-menu', __('Sample of registered Menu'));
 }
 add_action('init', 'child_theme_register_menu');
+
+//Adding a filter
+function child_theme_filter_example($title)
+{
+    return $title . ' - This bit is done by add_filter!!!';
+}
+add_filter('the_title', 'child_theme_filter_example');
