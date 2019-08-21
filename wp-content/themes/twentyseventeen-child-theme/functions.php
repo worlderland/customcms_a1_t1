@@ -22,3 +22,29 @@ function my_custom_header_args($args)
     return $args;
 }
 add_filter('twentyseventeen_custom_header_args', 'my_custom_header_args');
+
+//Registering new widgets areas for the child theme
+function child_theme_widget_init()
+{
+
+    register_sidebar(array(
+        'name' => 'Child Theme Widget Area 1',
+        'id' => 'child_theme_widget_area_1',
+        'before_widget' => '<div>', //Only div because aside is already in sidebar.php
+        'after_widget' => '</div>',
+        'before_title' => '<h4 class="widget-title">',
+        'after_title' => '</h4>',
+
+    ));
+
+    register_sidebar(array(
+        'name' => 'Child Theme Widget Area 2',
+        'id' => 'child_theme_widget_area_2',
+        'before_widget' => '<section>',
+        'after_widget' => '</section>',
+        'before_title' => '<h4 class="widget-title">',
+        'after_title' => '</h4>',
+
+    ));
+}
+add_action('widgets_init', 'child_theme_widget_init');
